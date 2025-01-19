@@ -1,24 +1,17 @@
 import streamlit as st
+import tensorflow as tf
 import numpy as np
-from keras.models import load_model
-from keras.preprocessing.image import load_img, img_to_array
 
-# Keras Model Prediction
+
+#Tensorflow Model Prediction
 def model_prediction(test_image):
-    # Load the model using keras
-    model = load_model("vgg16_model2.h5")
-    
-    # Preprocess the image
-    image = load_img(test_image, target_size=(256, 256))
-    input_arr = img_to_array(image)
-    input_arr = np.array([input_arr])  # Convert single image to batch
-    input_arr /= 255.0  # Normalize the image to [0, 1]
-    
-    # Predict using the model
+    model = tf.keras.models.load_model("vgg16_model2.h5")
+    image = tf.keras.preprocessing.image.load_img(test_image,target_size=(256,256))
+    input_arr = tf.keras.preprocessing.image.img_to_array(image)
+    input_arr = np.array([input_arr]) #convert single image to batch
+    input_arr /= 255.0 
     predictions = model.predict(input_arr)
-    
-    # Return the index of the maximum element in predictions
-    return np.argmax(predictions)
+    return np.argmax(predictions) #return index of max element
 
 #Sidebar
 st.sidebar.title("Dashboard")
