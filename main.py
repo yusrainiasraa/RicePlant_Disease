@@ -21,7 +21,7 @@ app_mode = st.sidebar.selectbox("Select Page",["Home","Disease Classification"])
 if(app_mode=="Home"):
     st.header("RICE PLANT DISEASE CLASSIFICATION SYSTEM")
     image_path = "riceplant.png"
-    st.image(image_path,use_column_width=True)
+    st.image(image_path,use_container_width=True)
     st.markdown("""
     Welcome to the Rice Plant Disease Classification System! 🌿🔍
     
@@ -45,7 +45,7 @@ if(app_mode=="Home"):
     """)
 
     image_path = "disease.png"
-    st.image(image_path, use_column_width=True)
+    st.image(image_path, use_container_width=True)
     st.markdown("""
     The trained dataset can be found on the link [Kaggle Rice Crop Diseases Dataset](https://www.kaggle.com/datasets/thegoanpanda/rice-crop-diseases). 
     This dataset contains 200 images of disease-infected rice plants. The images are grouped into 4 classes based on the type of disease. There are 50 images in each class.
