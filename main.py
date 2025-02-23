@@ -15,7 +15,7 @@ def model_prediction(test_image):
 
 #Sidebar
 st.sidebar.title("Tab")
-app_mode = st.sidebar.selectbox("Select Page",["Home","Disease Classification"])
+app_mode = st.sidebar.selectbox("Select Tab",["Home","Disease Classification"])
 
 #Main Page
 if(app_mode=="Home"):
