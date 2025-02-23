@@ -14,7 +14,7 @@ def model_prediction(test_image):
     return np.argmax(predictions) #return index of max element
 
 #Sidebar
-st.sidebar.title("Dashboard")
+st.sidebar.title("Tab")
 app_mode = st.sidebar.selectbox("Select Page",["Home","Disease Classification"])
 
 #Main Page
