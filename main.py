@@ -19,7 +19,7 @@ app_mode = st.sidebar.selectbox("Select Tab",["Home","Disease Classification"])
 
 #Main Page
 if(app_mode=="Home"):
-    st.header("RICE PLANT DISEASE CLASSIFICATION SYSTEM")
+    st.header("RICE PLANT DISEASE CLASSIFICATION")
     image_path = "riceplant.png"
     st.image(image_path,use_container_width=True)
     st.markdown("""
